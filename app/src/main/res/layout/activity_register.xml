@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#00bfbf"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".RegisterActivity">
+
+    <TextView
+        android:layout_marginTop="75dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nanumsquareroundb"
+        android:textColor="#ffffff"
+        android:textSize="24.7sp"
+        tools:text="만나서 반가워요!" />
+    <EditText
+        android:background="@android:color/transparent"
+        android:layout_marginTop="75dp"
+        android:layout_marginHorizontal="65dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nanumsquareroundb"
+        android:textColor="#ffffff"
+        android:textColorHint="#95ffffff"
+        android:textSize="24.7sp"
+        android:hint="아이디"/>
+    <View
+        android:layout_marginHorizontal="55dp"
+        android:layout_marginTop="13dp"
+        android:background="#95ffffff"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+    <EditText
+        android:background="@android:color/transparent"
+        android:layout_marginTop="35dp"
+        android:layout_marginHorizontal="65dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nanumsquareroundb"
+        android:textColor="#ffffff"
+        android:textColorHint="#95ffffff"
+        android:textSize="24.7sp"
+        android:hint="비밀번호"/>
+    <View
+        android:layout_marginHorizontal="55dp"
+        android:layout_marginTop="13dp"
+        android:background="#95ffffff"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+    <EditText
+        android:background="@android:color/transparent"
+        android:layout_marginTop="35dp"
+        android:layout_marginHorizontal="65dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nanumsquareroundb"
+        android:textColor="#ffffff"
+        android:textColorHint="#95ffffff"
+        android:textSize="24.7sp"
+        android:hint="비밀번호 확인"/>
+    <View
+        android:layout_marginHorizontal="55dp"
+        android:layout_marginTop="13dp"
+        android:background="#95ffffff"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+
+</LinearLayout>

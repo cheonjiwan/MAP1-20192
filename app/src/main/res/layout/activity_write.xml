@@ -1,0 +1,533 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="20dp"
+    android:orientation="vertical"
+    tools:context=".WriteActivity">
+
+    <RelativeLayout
+        android:layout_marginTop="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageButton
+            android:id="@+id/backButton"
+            android:src="@drawable/btn_back"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:scaleType="fitXY"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_width="31.7dp"
+            android:layout_height="28.7dp" />
+        <TextView
+            android:fontFamily="@font/nanumsquareroundb"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="19.3sp"
+            android:textColor="#4a4a4a"
+            android:text="글쓰기" />
+        <ImageButton
+            android:id="@+id/publishButton"
+            android:layout_width="32dp"
+            android:layout_height="21dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:scaleType="fitXY"
+            android:src="@drawable/pub_icon" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="30dp"
+        android:fillViewport="true"
+        android:focusableInTouchMode="false"
+        android:orientation="vertical"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                >
+
+                <ImageButton
+                    android:id="@+id/move"
+                    android:layout_width="60dp"
+                    android:layout_height="22dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginHorizontal="2dp"
+                    android:background="@android:color/transparent"
+                    android:onClick="onClick"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/cat_move" />
+
+                <ImageButton
+                    android:id="@+id/pack"
+                    android:layout_width="60dp"
+                    android:layout_height="22dp"
+                    android:layout_marginHorizontal="2dp"
+                    android:layout_toRightOf="@+id/move"
+                    android:background="@android:color/transparent"
+                    android:onClick="onClick"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/cat_pack" />
+
+                <ImageButton
+                    android:id="@+id/car"
+                    android:layout_width="60dp"
+                    android:layout_height="22dp"
+                    android:layout_marginHorizontal="2dp"
+                    android:layout_toRightOf="@+id/pack"
+                    android:background="@android:color/transparent"
+                    android:onClick="onClick"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/cat_car" />
+
+                <ImageButton
+                    android:id="@+id/animal"
+                    android:layout_width="60dp"
+                    android:layout_height="22dp"
+                    android:layout_marginHorizontal="2dp"
+                    android:layout_toRightOf="@+id/car"
+                    android:background="@android:color/transparent"
+                    android:onClick="onClick"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/cat_pet" />
+
+                <ImageButton
+                    android:id="@+id/etc"
+                    android:layout_width="60dp"
+                    android:layout_height="22dp"
+                    android:layout_marginHorizontal="2dp"
+                    android:layout_toRightOf="@+id/animal"
+                    android:background="@android:color/transparent"
+                    android:onClick="onClick"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/cat_etc" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="18dp"
+                android:fontFamily="@font/nanumsquareroundb"
+                android:lineSpacingExtra="2sp"
+                android:text="필요한 인원은 몇 명인가요?"
+                android:textColor="#414141"
+                android:textSize="13.3sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="30dp"
+                android:background="@android:color/transparent"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/minus"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="10dp"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/minus" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginRight="50dp"
+                    android:orientation="horizontal"
+                    android:layout_centerInParent="true"
+                    >
+
+
+                    <ImageView
+                        android:id="@+id/img1"
+                        android:layout_width="33dp"
+                        android:layout_height="51dp"
+                        android:layout_marginHorizontal="10dp"
+                        android:background="@android:color/transparent"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/hum_icon"
+                        android:visibility="visible" />
+
+                    <ImageView
+                        android:id="@+id/img2"
+                        android:layout_width="33dp"
+                        android:layout_height="51dp"
+                        android:layout_marginHorizontal="10dp"
+                        android:background="@android:color/transparent"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/hum_icon"
+                        android:visibility="visible" />
+
+                    <ImageView
+                        android:id="@+id/img3"
+                        android:layout_width="33dp"
+                        android:layout_height="51dp"
+                        android:layout_marginHorizontal="10dp"
+                        android:background="@android:color/transparent"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/hum_icon"
+                        android:visibility="visible" />
+
+                    <ImageView
+                        android:id="@+id/img4"
+                        android:layout_width="33dp"
+                        android:layout_height="51dp"
+                        android:layout_marginHorizontal="10dp"
+                        android:background="@android:color/transparent"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/hum_icon"
+                        android:visibility="visible" />
+
+
+                </LinearLayout>
+
+                <ImageButton
+                    android:id="@+id/plus"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/plus" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="25dp"
+                android:background="#eeeeee" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:orientation="horizontal"
+                android:paddingHorizontal="60dp">
+
+                <ImageView
+                    android:id="@+id/priceImage"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/pay_icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="7dp"
+                    android:layout_toRightOf="@+id/priceImage"
+                    android:fontFamily="@font/nanumsquareroundb"
+                    android:text="시급"
+                    android:textColor="#414141"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="-2dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_toLeftOf="@+id/wonText"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/nanumsquareroundb"
+                    android:hint="8350"
+                    android:textColor="#8d8d8d"
+                    android:textSize="33sp" />
+
+                <TextView
+                    android:id="@+id/wonText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/nanumsquareroundb"
+                    android:text="원"
+                    android:textColor="#707070"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="3dp"
+                android:fontFamily="@font/nanumsquareroundb"
+                android:text="업무 강도에 따라 양심적인 페이를 책정해주세요."
+                android:textColor="#adadad"
+                android:textSize="10sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/deatiltext_background"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <EditText
+                    android:id="@+id/title_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/nanumsquareroundb"
+                    android:hint="간략한 제목을 적어주세요."
+                    android:textColor="#707070"
+                    android:textSize="11sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/deatiltext_background"
+                android:padding="33dp">
+                <EditText
+                    android:id="@+id/content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/nanumsquareroundb"
+                    android:hint="업무에 대한 상세내용, 우대조건 등을 자유롭게 써주세요."
+                    android:textColor="#707070"
+                    android:textSize="11sp" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="19dp"
+                android:paddingHorizontal="20dp">
+
+                <ImageButton
+                    android:id="@+id/startDateButton"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="0dp"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/cal" />
+
+                <TextView
+                    android:id="@+id/startDateText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toRightOf="@+id/startDateButton"
+                    android:fontFamily="@font/nanumsquareroundb"
+                    android:lineSpacingExtra="2.7sp"
+                    android:text="2019.00.00"
+                    android:textColor="#8d8d8d"
+                    android:textSize="18sp" />
+
+                <ImageButton
+                    android:id="@+id/endDateButton"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_toLeftOf="@+id/endDateText"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/cal" />
+
+                <TextView
+                    android:id="@+id/endDateText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="15dp"
+                    android:lineSpacingExtra="2.7sp"
+                    android:fontFamily="@font/nanumsquareroundb"
+                    android:text="2019.00.00"
+                    android:textColor="#8d8d8d"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="30dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/t1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nanumsquareroundb"
+                    android:text="PM"
+                    android:textColor="#8d8d8d"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/starthour"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/nanumsquareroundb"
+                    android:hint="00"
+                    android:inputType="number"
+                    android:textAlignment="center"
+                    android:textColor="#8d8d8d"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nanumsquareroundb"
+                    android:text=":"
+                    android:textColor="#8d8d8d"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/startminute"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/nanumsquareroundb"
+                    android:hint="00"
+                    android:inputType="number"
+                    android:textAlignment="center"
+                    android:textColor="#8d8d8d"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nanumsquareroundb"
+                    android:text=" - "
+                    android:textColor="#8d8d8d"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/endhour"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/nanumsquareroundb"
+                    android:hint="00"
+                    android:inputType="number"
+                    android:textAlignment="center"
+                    android:textColor="#8d8d8d"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nanumsquareroundb"
+                    android:text=":"
+                    android:textColor="#8d8d8d"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/endminute"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/nanumsquareroundb"
+                    android:hint="00"
+                    android:inputType="number"
+                    android:textAlignment="center"
+                    android:textColor="#8d8d8d"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/t2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nanumsquareroundb"
+                    android:text="PM"
+                    android:textColor="#8d8d8d"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="17dp">
+
+                <ImageView
+                    android:layout_width="13dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/mark_icon" />
+
+                <EditText
+                    android:id="@+id/location_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/nanumsquareroundb"
+                    android:hint="업무 장소를 입력해주세요!"
+                    android:textColor="#c6c6c6"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/location_find"
+                    android:layout_width="20dp"
+                    android:layout_height="18dp"
+                    android:layout_marginLeft="15dp"
+                    android:src="@drawable/btn_search" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginHorizontal="50dp"
+                android:layout_marginTop="10dp"
+                android:background="#eeeeee" />
+
+<!--            <ImageView-->
+<!--                android:id="@+id/mapLayout"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="300dp"-->
+<!--                android:layout_centerHorizontal="true"-->
+<!--                android:layout_marginTop="18dp"-->
+<!--                android:layout_marginBottom="28dp"-->
+<!--                android:background="@android:color/transparent"-->
+<!--                android:scaleType="fitXY"-->
+<!--                android:src="@drawable/map" />-->
+            <fragment
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:id="@+id/map"
+                tools:context=".MapsActivity"
+                android:name="com.google.android.gms.maps.SupportMapFragment" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

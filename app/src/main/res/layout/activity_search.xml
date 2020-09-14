@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="28dp"
+    tools:context=".SearchActivity">
+    <RelativeLayout
+        android:layout_marginTop="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageButton
+            android:id="@+id/backButton"
+            android:src="@drawable/btn_back"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:scaleType="fitXY"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_width="31.7dp"
+            android:layout_height="28.7dp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_gravity="center"
+        android:layout_marginTop="100dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:id="@+id/move"
+                android:layout_width="72dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+                android:background="@android:color/transparent"
+                android:onClick="onClick"
+                android:scaleType="fitXY"
+                android:src="@drawable/s_move" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/car"
+                android:layout_width="75dp"
+                android:layout_height="51dp"
+                android:layout_gravity="center"
+                android:background="@android:color/transparent"
+                android:onClick="onClick"
+                android:scaleType="fitXY"
+                android:src="@drawable/s_car" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_gravity="center"
+                android:src="@drawable/tagbutton_move"
+                android:layout_width="wrap_content"
+                android:layout_height="17dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_gravity="center"
+                android:src="@drawable/tagbutton_car"
+                android:layout_width="wrap_content"
+                android:layout_height="17dp" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_gravity="center"
+        android:layout_marginTop="42dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:id="@+id/animal"
+                android:layout_width="70dp"
+                android:layout_height="72dp"
+                android:layout_gravity="center"
+                android:background="@android:color/transparent"
+                android:onClick="onClick"
+                android:scaleType="fitXY"
+                android:src="@drawable/s_pet" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/deliever"
+                android:layout_width="67dp"
+                android:layout_height="79dp"
+                android:layout_gravity="center"
+                android:background="@android:color/transparent"
+                android:onClick="onClick"
+                android:scaleType="fitXY"
+                android:src="@drawable/s_pack" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_gravity="center"
+                android:src="@drawable/tagbutton_pet"
+                android:layout_width="wrap_content"
+                android:layout_height="17dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_gravity="center"
+                android:src="@drawable/tagbutton_pack"
+                android:layout_width="wrap_content"
+                android:layout_height="17dp" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_gravity="center"
+        android:layout_marginTop="67dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:id="@+id/gita"
+                android:layout_width="63dp"
+                android:layout_height="14dp"
+                android:layout_gravity="center"
+                android:background="@android:color/transparent"
+                android:onClick="onClick"
+                android:scaleType="fitXY"
+                android:src="@drawable/s_etc" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:orientation="vertical">
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_gravity="center"
+                android:src="@drawable/tagbutton_etc"
+                android:layout_width="wrap_content"
+                android:layout_height="17dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
